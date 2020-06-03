@@ -76,13 +76,15 @@
 
       _sort: function (e) {
         var column = e.target.cellIndex;
-        // var data = this.state.data.slic  e();
+        // var data = this.state.data.slice();
         var data = Array.from(this.state.data);
         var descending = this.state.sortby === column && !this.state.descending;
         data.sort(function(a,b){
           // return a[column] > b[column] ? 1 : -1;
           // return a.data > b.data ? 1 : -1;
-          return descending ? (a[column] < b[column] ? 1 : -1) : (a[column] > b[column] ? 1 : -1);
+          return descending 
+            ? (a[column] < b[column] ? 1 : -1) 
+            : (a[column] > b[column] ? 1 : -1);
         });
         this._logSetState({
           data: data,

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Hello JSX React</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <div id="app">
+    <!-- my app renders here -->
+  </div>
+  <script src="./build/react.js"></script>
+  <script src="./build/react-dom.js"></script>
+  <script src="../babel/browser.js"></script>
+  <script type="text/babel">
+    // ReactDOM.render(
+    //   <h1 id="my-heading">
+    //     <span><em>Hell</em>o</span> world!
+    //     </h1>,
+    //   document.getElementById('app')
+    // );
+    const RAQUO = '\u00bb';
+    ReactDOM.render(
+      
+        <h1>
+
+          {1} 
+          {' plus ' } 
+          {/* コメント */}
+          {2}   
+          {' is '}       
+          {3}
+          <div>
+          矢印 &raquo;
+          </div>
+          <div>
+          {"詳しくはこちら &raquo;"}
+          </div>
+          <div>
+          {"詳しくはこちら\u00bb"}
+          </div>
+          <div>
+          {"詳しくはこちら"+ RAQUO}
+          </div>
+          <div>
+            {"詳しくはこちら"}{RAQUO}
+          </div>
+        </h1>,
+        document.getElementById('app')
+      );
+  </script>
+</body>
+
+</html>
